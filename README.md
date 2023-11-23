@@ -21,8 +21,6 @@ ____
 
 * <a href="#allure-testops">Интеграция с Allure TestOps</a>
 
-* <a href="#jira">Интеграция с Jira</a>
-
 * <a href="#telegram">Уведомление в Telegram при помощи бота</a>
 
 * <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
@@ -127,24 +125,10 @@ ____
 <img title="Allure TestOps Dashboard" src="src/test/resources/images/screen/allureTestops1.png" width="850">  
 </p>  
 
-### *Ручные тест-кейсы*
-
-<p align="center">  
-<img title="Allure Tests" src="src/test/resources/images/screen/manual_tests.png" width="850">  
-</p>
-
-### *Авто тест-кейсы*
+### *Тест-кейсы*
 
 <p align="center">  
 <img title="Allure TestOps Tests" src="src/test/resources/images/screen/allureTestopsAtotests.png" width="850">  
-</p>
-
-___
-<a id="jira"></a>
-## <img alt="Allure" height="25" src="src/test/resources/images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-682">Jira</a>
-____
-<p align="center">  
-<img title="Jira" src="src/test/resources/images/screen/jira.png" width="850">  
 </p>
 
 ____
