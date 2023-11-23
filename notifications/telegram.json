@@ -1,0 +1,18 @@
+{
+  "base": {
+    "logo": "src/test/resources/Logo White Yellow Tango QA 60X60.png",
+    "project": "Tango-control",
+    "environment": "Production",
+    "comment": "test build",
+    "reportLink": "allure",
+    "language": "en",
+    "messenger": "telegram",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6517352223:AAH2cgrRHIiPgiZ0vTu_URGid8NK9t3UDS0",
+    "chat": "-1002132066080",
+    "replyTo": ""
+  }
+}

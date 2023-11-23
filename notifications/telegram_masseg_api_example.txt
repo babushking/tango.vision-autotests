@@ -1,0 +1,30 @@
+https://api.telegram.org/bot6517352223:AAH2cgrRHIiPgiZ0vTu_URGid8NK9t3UDS0/getUpdates
+
+CHAT_ID = -4094344083,
+BOT_TOKEN = 6517352223:AAH2cgrRHIiPgiZ0vTu_URGid8NK9t3UDS0
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "-4094344083", "text": "This is a test from curl", "disable_notification": true}' \
+     https://api.telegram.org/bot6517352223:AAH2cgrRHIiPgiZ0vTu_URGid8NK9t3UDS0/sendMessage
+
+
+
+     Ниже пример config.json для запуска локально
+Local build
+{
+  "base": {
+    "logo": "notifications/resources/Logo White Yellow Tango QA 60X60.png",
+    "project": "Tango-control",
+    "environment": "Production",
+    "comment": "",
+    "reportLink": "allure",
+    "language": "en",
+    "allureFolder": "allure-report",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6517352223:AAH2cgrRHIiPgiZ0vTu_URGid8NK9t3UDS0",
+    "chat": "-1002132066080",
+    "replyTo": ""
+  }
+}
