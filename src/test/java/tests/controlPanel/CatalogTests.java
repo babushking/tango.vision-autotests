@@ -21,7 +21,6 @@ public class CatalogTests extends TestBase{
         authorisationPage.inputLogin(login);
         authorisationPage.inputPassword(password);
         authorisationPage.clickSubmit();
-
         catalogPage.openMallPage();
         catalogPage.openCatalogPage();
         catalogPage.clickCreateCatalogButton();
@@ -37,7 +36,6 @@ public class CatalogTests extends TestBase{
         authorisationPage.inputLogin(login);
         authorisationPage.inputPassword(password);
         authorisationPage.clickSubmit();
-
         catalogPage.openMallPage();
         catalogPage.openCatalogPage();
         catalogPage.openCatalog();
