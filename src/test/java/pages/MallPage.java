@@ -16,7 +16,7 @@ public class MallPage {
     }
     public void clickSelectLogoButton() {
         step("Нажимаем на кнопку 'Выбрать лого'", () -> {
-            $(".files > input").uploadFile(new File("src/test/resources/logo Tango.vision.png"));
+            $(".files > input").uploadFile(new File("src/test/resources/images/logo/logo Tango.vision.png"));
         });
     }
     public void inputName() {

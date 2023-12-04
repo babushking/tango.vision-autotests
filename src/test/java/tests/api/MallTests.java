@@ -101,7 +101,6 @@ public class MallTests extends MallSpec{
     public void testDeleteMallsByName() {
         // Получаем id магазинов с названием MALL_NAME
         List<String> mallIds = getMallIdsByName(MALL_NAME);
-        System.out.println("IDs of malls with name" + MALL_NAME  + mallIds);
         // Удаляем магазины по их id
         for (String mallId : mallIds) {
             given(mallRequestSpec)
