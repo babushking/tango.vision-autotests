@@ -11,26 +11,32 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.AuthorisationPage;
-
+import pages.CatalogPage;
+import pages.MallPage;
+import pages.ShopPage;
 import java.util.Map;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
-    Dotenv dotenv = Dotenv.load();
-    // Получение значения переменной окружения API_KEY
-    String login = dotenv.get("LOGIN");
-    // Получение значения переменной окружения DB_PASSWORD
-    String password = dotenv.get("PASSWORD-DEV");
-    Faker faker = new Faker();
+    ShopPage shopPage = new ShopPage();
+    CatalogPage catalogPage = new CatalogPage();
+    MallPage mallPage = new MallPage();
     AuthorisationPage authorisationPage = new AuthorisationPage();
+    Faker faker = new Faker();
+    Dotenv dotenv = Dotenv.load();
+    String login = dotenv.get("LOGIN");
+    String password = dotenv.get("PASSWORD-DEV");
+    String fakeName = String.valueOf(faker.company().name());
+    String fakeOrder = String.valueOf(faker.number().numberBetween(1, 100));
+    String mallfakeName = String.valueOf(faker.name().title());
+    String fakeShopName = String.valueOf(faker.name().title());
 
     @BeforeAll
     static void config() {
         Configuration.baseUrl = "https://control.tangovision.dev/";
         Configuration.browser = "chrome";
         Configuration.browserSize = "2100x1080";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
+//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -52,4 +58,3 @@ public class TestBase {
         closeWebDriver();
     }
 }
-
