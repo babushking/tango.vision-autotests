@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import models.CreateNewMallBodyModel;
+import endpoints.EndPoints;
 import specs.MallSpec;
 
 import java.util.List;
@@ -54,7 +55,7 @@ public class MallTests extends MallSpec{
     void getShopsByMallTest() {
         given(mallRequestSpec)
                 .when()
-                .get("653eb60ed879ec023a0cfc4a/dataset/shops")
+                .get(EndPoints.shops, "653eb60ed879ec023a0cfc4a")
                 .then()
                 .spec(mallResponseSpec);
     }
@@ -64,7 +65,7 @@ public class MallTests extends MallSpec{
     void getCategoriesByMallTest() {
         given(mallRequestSpec)
                 .when()
-                .get("653eb60ed879ec023a0cfc4a/dataset/categories")
+                .get(EndPoints.categories, "653eb60ed879ec023a0cfc4a")
                 .then()
                 .spec(mallResponseSpec);
     }
